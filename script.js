@@ -59,7 +59,7 @@ showMyDB(personalMovieDB.privat);
 
 function writeYourGenres() {
     for (let i = 1; i <= 3; i++) {
-        personalMovieDB.genres[i - 1] = prompt(`Your favorit genres number ${1}`);
+        personalMovieDB.genres[i - 1] = prompt(`Your favorite genres number ${1}`);
     }
 }
 
