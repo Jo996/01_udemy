@@ -35,7 +35,7 @@ for (let value of arr) {
     console.log(value);
 } */
 
-// split() превраўает строку в массив
+// split() превращает строку в массив
 const str = prompt("", "");
 const products = str.split(", ");
 products.sort();
