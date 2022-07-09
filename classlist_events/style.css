@@ -1,0 +1,19 @@
+body {
+    background-color: aqua;
+}
+
+button {
+    padding: 30px 60px;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.btn-block {
+    background-color: gray;
+}
+
+.red {
+    background-color: red;
+}
