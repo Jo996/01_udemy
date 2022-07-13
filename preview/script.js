@@ -1,49 +1,28 @@
 'use strict';
 
-const btns = document.querySelectorAll('button'),
-    overlay = document.querySelector('.overlay');
+const box = document.querySelector('.box'),
+    btn = document.querySelector('button');
 
-// назначение обработчика событий :
-/* btn.addEventListener('click', () => {
-    alert('click');
-}); */
+//const width = box.clientWidth;
+//const height = box.clientHeight;
+/* const width = box.offsetWidth;
+const height = box.offsetHeight; */
 
-/* btn.addEventListener('mouseenter', () => {
-    console.log('Hover');
-}); */
+const width = box.scrollWidth;
+const height = box.scrollHeight;
 
-// event
-//btn.addEventListener('click', (e) => {
- //   console.log(e.target);
-    //e.target.remove();
-//});
+console.log(width, height);
 
-
-// .removeEventListener
-/* let i = 0; */
-const deleteElement = (e) => {
-    console.log(e.currentTarget);
-    console.log(e.type);
-   /*  i++;
-    if (i == 1) {
-        btn.removeEventListener('click', deleteElement);
-    } */
-};
-/* btn.addEventListener('click', deleteElement); */
-//overlay.addEventListener('click', deleteElement);
-
-// отмена стандартного поведения в браузере ( на примере ссылки)
-const link = document.querySelector('a');
-link.addEventListener('click', (event) => {
-    event.preventDefault();
-    console.log(event.target);
+btn.addEventListener('click', () => {
+    //box.style.height = box.scrollHeight + 'px';
+    console.log(box.scrollTop);
 });
 
-// один обработчик события сразу на несколько элементов
-btns.forEach(btn => {
-    btn.addEventListener('click', deleteElement, { once: true});
+console.log(box.getBoundingClientRect().top);
 
-});
+const style = window.getComputedStyle(box);
+console.log(style.display);
 
-// опции события
-//btn.addEventListener('click', deleteElement, { once: true });
+
+console.log(document.documentElement.clientWidth);
+console.log(document.documentElement.scrollTop);
