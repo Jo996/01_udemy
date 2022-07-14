@@ -1,5 +1,20 @@
 'use strict';
 
+// rest-оператор
+const log = function(a, b, ...rest) {
+    console.log(a, b, rest);
+}
+ 
+log('basic', 'rest', 'operator', 'usage');
+
+//параметры по умолчанию 
+function calcOrDouble(number, basis = 2) {
+    //basis = basis || 2; -старый вариант 
+    console.log(number * basis);
+}
+
+calcOrDouble(3);
+
 /* function User(name, id) {
     this.name = name;
     this.id = id;
@@ -14,7 +29,7 @@ User.prototype.exit = function () {
 };
  */
 
-class User {
+/* class User {
     constructor(name, id) {
     this.name = name;
     this.id = id;
@@ -38,4 +53,4 @@ ivan.hello();
 alex.hello();
 
 console.log(ivan);
-console.log(alex);
+console.log(alex); */
